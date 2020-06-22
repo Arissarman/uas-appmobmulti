@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Dunia@24jam.com
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <ion-card *ngFor="let article of articles">
+    <img src="{{article.urlToImage}}"/>
+    <ion-card-content>
+      <h1>{{article.title}}</h1>
+      <p>
+        {{article.description}}
+        <a fill="outline" href="{{article.url}}" large>Baca Selengkapnya</a>
+      </p>
+      <p>
+        {{article.publishedAt}}
+      </p>
+      <p>
+        {{article.source.name}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
